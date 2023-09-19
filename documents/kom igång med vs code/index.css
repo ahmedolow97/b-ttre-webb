@@ -1,0 +1,17 @@
+.bubbles {
+    background-color: #FFE4FA;
+    padding: 1em;
+    min-height: 14em;
+    position: relative;
+}
+.bubbles > div {
+    border-radius: 9001em;
+    border: none;
+    position: absolute;
+}
+
+
+.bubble1 { 
+    color: blue;
+
+}
