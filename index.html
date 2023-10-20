@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      html, input {
+        font-family: sans-serif;
+      }
+
+      
+      form {
+        margin-top: 8px;
+      }
+
+      
+
+      label, input, button {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      label {
+        text-align: right;
+        width: 0%;
+        margin-right: 1%;
+      }
+
+      input {
+        flex: auto;
+      }
+
+      button {
+        width: 8%;
+        margin: 5% auto;
+      }
+      @media only screen and (max-width: 341px) {
+        button {
+          width: 15%;
+        }
+      }
+
+    </style>
+    <head>
+    <title>code cub</title>
+    </head>
+    
+    <body>
+    
+        <header>
+         
+             <nav class="nav-bar">
+            <h1 class="company-name">Code Club</h1>
+            <ul>
+               <li> <a class="bar" href="#seminars">Seminarier</a> </li>
+               <li><a class="bar" href="#food">Matbeställning</a></li>
+              <li><a class="bar" href="#registration">Anmälan</a></li>
+            </ul>
+          </nav>
+        </header>
+    <main>
+      
+      
+<div class="main-text">
+        <h1 class="titel">Välkomna till Framtidens Webbutveckling, årets mest spännande sammankomst för frontendutvecklare! Under tre dagar, från den 20:e till 22:e oktober, kommer vi att dyka in i den dynamiska världen av webbutveckling och dela kunskap om de senaste trenderna och teknologierna.</h1>
+        <h2 class="day1">Dag 1 (20/10)</h2>
+        <ul class="text">
+          <li>"Framtidens Webbutveckling"
+              Utforska de senaste trenderna och teknologierna inom webbutveckling.</li>
+          <li>"Användarcentrerad Design"
+              Lär dig att skapa användarupplevelser genom fokus på användarnas behov och förväntningar.</li>
+          <li>"Responsiv Design: Bästa Praxis"
+              Djupdykning i tekniker och strategier för att skapa responsiva och mobilvänliga webbplatser.</li>
+          <li>"Frontend Frameworks: En Översikt"
+              Jämförelse och översikt av olika frontend-ramverk som React, Angular och Vue.</li>
+          </ul>
+      
+   <h2 class="day2">Dag 2 (21/10)</h2>
+    <ul class="text2">
+      <li>"Optimera Webbplatser för Sök"
+           Strategier för att förbättra webbplatsens synlighet och prestanda i sökmotorer.</li>
+      <li>"Progressiva Web Apps (PWA)"
+           Utforska konceptet med PWA och hur det kan förbättra användarupplevelsen.</li>
+      <li>"Web Security: Bästa Praxis"
+           Vikten av webbsäkerhet och hur man skyddar webbplatser från olika hot.</li>
+    </ul>
+   <h2>Dag 3 (22/10)</h2>
+    <ul class="text3">
+        <li> "Microservices-arkitektur för Frontend"
+             Hur man implementerar en mikrotjänstarkitektur på frontend-sidan för skalbarhet och underhållbarhet.</li>
+        <li>"Optimera för Tillgänglighet"
+             Praktiska riktlinjer och verktyg för att göra webbplatser tillgängliga för alla användare, inklusive personer med funktionsnedsättningar.</li>
+        <li>"Webbprestanda: Lasttid och Optimering"
+             Strategier och verktyg för att mäta och förbättra webbplatsens prestanda, inklusive lasttider.</li>
+    </ul>
+</div>
+  
+<div class="registration-food">
+  <h2>Anmälan</h2>
+  <form class="contact-form" name="kontaktinfo" autocomplete="off" novalidate method="post" onsubmit="return false">
+      <div class="inputbox">
+          <label for="name">Namn</label>
+          <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Använd bara bokstäver och mellanslag" required>
+      </div>
+      <div class="inputbox">
+          <label for="Adress">Adress</label>
+          <input type="add" id="Adress" name="Adress" pattern="[A-Za-z\s-1-10]+" title="Redegatan 1B" required>
+      </div>
+      <div class="inputbox">
+          <label for="email">E-post</label>
+          <input type="email" id="email" name="email" required>
+      </div>
+      
+  </form>
+
+  <form>
+      <label for="registrationType">Välj dagpass:</label>
+      <select id="registrationType" name="registrationType" required>
+          <option value="fullConference">Hela konferensen</option>
+          <option value="day1">Dag 1 (20/10)</option>
+          <option value="day2">Dag 2 (21/10)</option>
+          <option value="day3">Dag 3 (22/10)</option>
+          <option value="day2">Dag 2 & 3</option>
+          <option value="day3">Dag 1 & 3</option>
+          <option value="day1">Dag 1 & 2</option>
+         </select>
+
+      <label for="numberOfTickets">Antal biljetter:</label>
+      <input type="number" id="numberOfTickets" name="numberOfTickets" min="1" required>
+      
+  </form>
+
+
+  
+  <form>
+      <label for="mealType">Välj mattyp:</label>
+      <select id="mealType" name="mealType" required>
+          <option value="meat">Grillad biff med bearnaisesås</option>
+          <option value="fish">Grillad lax med honungssenapsglaze</option>
+          <option value="vegetarian">Aubergineparmigiana</option>
+      </select>
+
+      <label for="allergies">Ange allergier (om några):</label>
+      <input type="text" id="allergies" name="allergies" pattern="[A-Za-z\s]+">
+       <button type="submit">Anmäl</button>
+  </form>
+</div>
+
+  <footer class="footer">
+      <ul class="socials"> 
+          <li>
+            <a href="https://www.youtube.com" target="_blank"> 
+              <i class="fa-brands fa-youtube fa-3x" style="color: #f00505;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank"> 
+              <i class="fa-brands fa-instagram fa-3x" style="color: #f03891;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" target="_blank"> 
+              <i class="fa-brands fa-facebook fa-3x" style="color: #1355c9;"></i>
+            </a>
+            </li>
+        </ul>
+
+      <p class="slogan">&copy; Code Club</p>
+
+ <h5 class="addy">Svenska Mässan Gothia Towers<br>
+    Mässans Gata 24, Göteborg</h5>
+ <h5 class="phone"> Telefon: 1300 493848</h5>
+
+
+ </ul>
+  </footer>
+
+</body>
+
+</html>
+
+
+    </main>
