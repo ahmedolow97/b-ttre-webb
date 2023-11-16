@@ -4,59 +4,131 @@
     box-sizing: border-box;
 }
 
-.nav-bar {
+
+body {
+ margin: 0;
+
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
     display: flex;
-    justify-content: flex-end;
-    font-weight:bolder;
-    font-style: italic;
-    
-    color: #0f1021;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f1021;
+    color: #ffcee4;
+    font-size: 25px;
+ 
 }
-    
-.nav-bar ul li {
+
+.brand-title {
+    font-size: 30px;
+    margin: .5rem;
+}
+
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
     list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-      
 }
 
-.company-name {
-    font-style: italic;
+.navbar-links li a {
+    text-decoration: none;
     color: #ffcee4;
-    margin-right: 10px; /* Align to the right by using auto margin */
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #0f1021;
+}
+
+.toggle-button {
+   position: absolute; 
+   top: .75rem;
+   right: 1rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.titel {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 50px;
     
-}
-
-.bar {
-    color: #ffcee4;
  }
 
- .titel {
-    font-family: fantasy;
-    line-height: 35px;
-    mix-blend-mode: luminosity;
+ .text,
+ .text2,
+ .text3 {
+    padding: 15px;
+    max-width: 70em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 140px;
+    
  }
+ 
  
  .text li,  
  .text3 li,
  .text2 li {
+    list-style: none;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      font-weight: bold;
-     border-radius: 5px;
-     border: 5px solid #ffcee4;
+     border-radius: 2px;
+     border: 2px solid white;
+    text-align: center;
+    padding: 2rem;
+    line-height: 30px;
+    justify-content: center;
+     
+
+    }
+
+
+    h2 {
+       text-align: center; 
+       padding: 3rem;
+       font-size: xx-large;
+
     }
  
  .registration-food {
-     color: #ffcee4;
-     border: 5px solid #ffcee4;
-     font-weight: bold;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     border-radius: 5px;
-     margin: 6px;
-     line-height: 25px;
+    color: white;
+    border:  solid white;
+    line-height: 25px;
+
+
+    
+}
      
-    }
+     
+    
+
+ 
+
+
+    
 
  
 
@@ -75,12 +147,13 @@
  .main-text {
     font-size: 13px;  
     
-    padding: 2em;
+    padding:9em;
     margin: 15px;
-    color: #ffcee4;
+    color: white;
     font-family: 'Courier New', Courier, monospace;
     line-height: 30px;
     border-radius: 20px;
+    justify-content: center;
     }
 
  .slogan {
@@ -105,65 +178,166 @@ justify-content: end;
 
 }
 
-@media only screen and (max-width: 1464px) {
-   
-   .nav-bar {
-        justify-content: center;
+@media only screen and (max-width: 480px) {
+    /* Styles for screens up to 480px width (commonly used for mobile phones) */
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      max-width: 100%;
+      background-color: #0f1021;
     }
-
-    .company-name {
-        margin-right: 0; 
-        color: #0f1021;
+  
+    .navbar-links.show {
+      display: flex;
     }
-    
-
+  
+    .navbar-links ul {
+      flex-direction: column;
+      max-width: 100%;
     }
-
-
-@media only screen and (max-width: 1024px) {
-    .nav-bar {
-        justify-content: center;
+  
+    .navbar-links li {
+      text-align: center;
+      max-width: 100%;
     }
-}
-
-
-@media only screen and (max-width: 768px) {
-    .nav-bar {
-        flex-direction: column;
-        align-items: center;
+  
+    .toggle-button {
+      display: flex;
     }
+  
+    .main-text,
+    .text,
+    .text2,
+    .text3 {
+      padding: 1rem;
+      margin-left: 0;
+    }
+  
+    .registration-food {
+      padding: 1rem;
+    }
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Styles for screens between 481px and 767px width (commonly used for small tablets) */
+    .navbar {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  
+    .brand-title {
+      font-size: 25px; /* Adjust brand title font size */
+    }
+  
+    .navbar-links li a {
+      padding: 0.8rem; /* Adjust padding for navigation links */
+    }
+  
+    .main-text,
+    .text,
+    .text2,
+    .text3 {
+      padding: 1rem; /* Adjust padding for main text */
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for screens between 768px and 1024px width (commonly used for medium-sized tablets and landscape tablets) */
+    .navbar {
+      font-size: 22px; /* Adjust font size for medium-sized screens */
+    }
+  
+    .brand-title {
+      font-size: 28px; /* Adjust brand title font size */
+    }
+  
+    .navbar-links li a {
+      padding: 1rem; /* Adjust padding for navigation links */
+    }
+  
+    .main-text,
+    .text,
+    .text2,
+    .text3 {
+      padding: 1.5rem; /* Adjust padding for main text */
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* Styles for screens larger than 1024px width (commonly used for desktops) */
+    .navbar {
+      font-size: 25px; /* Adjust font size for larger screens */
+    }
+  
+    .brand-title {
+      font-size: 32px; /* Adjust brand title font size */
+    }
+  
+    .navbar-links li a {
+      padding: 1.2rem; /* Adjust padding for navigation links */
+    }
+  
+    .main-text,
+    .text,
+    .text2,
+    .text3 {
+      padding: 2rem; /* Adjust padding for main text */
+    }
+  }
 
-    .company-name {
-        margin-right: 0px;
-        margin-bottom: 10px;
-       
+
+  
+
+
+  @media only screen and (max-width: 328px) {
+    /* Styles for screens up to 328px width (customized for smaller screens) */
+    .navbar {
+      font-size: 18px; /* Adjust font size for smaller screens */
+    }
+  
+    .brand-title {
+      font-size: 22px; /* Adjust brand title font size */
+    }
+  
+    .navbar-links li a {
+      padding: 0.6rem; /* Adjust padding for navigation links */
+    }
+  
+    .main-text,
+    .text,
+    .text2,
+    .text3 {
+      padding: 1rem; /* Adjust padding for main text */
+      font-size: 12px; /* Adjust font size for main text */
+    }
+  
+    .registration-food {
+      padding: 0.5rem; /* Adjust padding for registration form */
+    }
+  
+    .footer {
+      height: auto; /* Adjust footer height for smaller screens */
+    }
+  
+    .slogan,
+    .addy,
+    .phone {
+      font-size: 12px; /* Adjust font size for footer text */
       
     }
+  
+  }
 
-    .nav-bar ul {
-        margin-top: 10px;
-    }
-
-    .main-text,
-    .registration,
-    .food {
-        margin: 8px;
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .footer {
-        height: auto;
-    }
+  
 
 
-}
 
-input :valid {
-    color: blue;
-}
 
-input :invalid {
-    color: red;
-    
-}
+
+
+
+
+
+
